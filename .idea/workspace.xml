@@ -67,15 +67,25 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="30" selection-start="12307" selection-end="12307" vertical-scroll-proportion="2.1111112" vertical-offset="1233" max-vertical-offset="3195">
+            <state line="124" column="83" selection-start="8956" selection-end="8956" vertical-scroll-proportion="0.50549453" vertical-offset="1584" max-vertical-offset="2130">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#MainActivity#0" expanded="true" />
-                <element signature="e#1009#1019#0" expanded="true" />
+                <element signature="e#1081#1091#0" expanded="true" />
                 <element signature="method#doInBackground#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
                 <element signature="method#checkSightingExists#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
-                <element signature="method#POST#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
-                <element signature="method#convertInputStreamToString#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="22" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="356" max-vertical-offset="930">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#readTextFile#0;class#MyFile#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,6 +141,7 @@
         <option value="$PROJECT_DIR$/src/RSSFeed.java" />
         <option value="$PROJECT_DIR$/src/RSSParser.java" />
         <option value="$PROJECT_DIR$/src/Sighting.java" />
+        <option value="$PROJECT_DIR$/src/MyFile.java" />
         <option value="$PROJECT_DIR$/src/MainActivity.java" />
       </list>
     </option>
@@ -379,16 +390,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32762557" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12576313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32990867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32990867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -420,11 +431,9 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#MainActivity#0" expanded="true" />
-            <element signature="e#1009#1019#0" expanded="true" />
+            <element signature="e#1081#1091#0" expanded="true" />
             <element signature="method#doInBackground#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
             <element signature="method#checkSightingExists#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
-            <element signature="method#POST#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
-            <element signature="method#convertInputStreamToString#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -485,17 +494,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/io/BufferedWriter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="16" selection-start="1145" selection-end="1145" vertical-scroll-proportion="0.7584973" vertical-offset="41" max-vertical-offset="600">
+          <folding>
+            <element signature="method#flush#0;class#BufferedWriter#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="22" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0" vertical-offset="356" max-vertical-offset="930">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#readTextFile#0;class#MyFile#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="30" selection-start="12307" selection-end="12307" vertical-scroll-proportion="2.1111112" vertical-offset="1233" max-vertical-offset="3195">
+        <state line="124" column="83" selection-start="8956" selection-end="8956" vertical-scroll-proportion="0.50549453" vertical-offset="1584" max-vertical-offset="2130">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#MainActivity#0" expanded="true" />
-            <element signature="e#1009#1019#0" expanded="true" />
+            <element signature="e#1081#1091#0" expanded="true" />
             <element signature="method#doInBackground#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
             <element signature="method#checkSightingExists#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
-            <element signature="method#POST#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
-            <element signature="method#convertInputStreamToString#0;class#RssSightingAsyncTask#0;class#MainActivity#0" expanded="true" />
           </folding>
         </state>
       </provider>
