@@ -6,6 +6,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
+import org.json.simple.parser.JSONParser;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -26,6 +27,7 @@ public class MainActivity {
     }
 
     private static class RssSightingAsyncTask  {
+        Boolean first = true;
         RSSParser rssParser = new RSSParser();
         List<RSSItem> rssItems = new ArrayList<RSSItem>();
         List<Sighting> mySightings = new ArrayList<Sighting>();
@@ -45,7 +47,7 @@ public class MainActivity {
                             .get();
 
                     Element id = doc.select("html body#bd.fs3 div#ja-wrapper div#ja-containerwrap-fr div#ja-containerwrap2 div#ja-container div#ja-container2.clearfix div#ja-mainbody-fr.clearfix div#ja-contentwrap div#ja-content div#k2Container.itemView div.itemBody div.itemFullText div table.table1 tbody tr td").get(0);
-                    System.out.println("Debug: " + id.ownText());
+                    System.out.println(id.ownText());
 
                     if(!checkSightingExists(id.ownText())){
                         Element name = doc.select("html body#bd.fs3 div#ja-wrapper div#ja-containerwrap-fr div#ja-containerwrap2 div#ja-container div#ja-container2.clearfix div#ja-mainbody-fr.clearfix div#ja-contentwrap div#ja-content div#k2Container.itemView div.itemBody div.itemFullText div table.table1 tbody tr td").get(30);
@@ -85,13 +87,14 @@ public class MainActivity {
                             System.out.println("Debug: " + "Sighting added: species != null");
 
                         }
-                            for(Sighting subSighting: mySightings) {
-                                showSuccess(POST("http://fyp-irish-wildlife.herokuapp.com/sightings/postsighting/", subSighting));
-                            }
+
                     } else {
                         System.out.println("Debug: " + "Sighting not added");
                         return null;
                     }
+                }
+                for(Sighting subSighting: mySightings) {
+                    showSuccess(POST("http://fyp-irish-wildlife.herokuapp.com/sightings/postsighting/", subSighting));
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -99,8 +102,30 @@ public class MainActivity {
             return null;
         }
         private boolean checkSightingExists(String s) {
+            MyFile myFile = new MyFile();
+            System.out.println(s);
+            int idIn = Integer.parseInt(s);
 
-            return false;
+            if (first){
+                first = false;
+                if(idIn == getLatestID() ){
+                    return true;
+                } else {
+                    System.out.println("Debug: in here");
+                    myFile.writeTextFile("/home/ssjoleary/VPSWildlifeCronJob/src/ids.txt ", s);
+                    return false;
+                }
+            } else {
+                return getLatestID() == (idIn);
+            }
+        }
+
+        private int getLatestID(){
+            MyFile myFile = new MyFile();
+            String id = myFile.readTextFile("/home/ssjoleary/VPSWildlifeCronJob/src/ids.txt");
+
+            int latestid = Integer.parseInt(id.trim());
+            return latestid;
         }
         public static String POST(String url, Sighting sightingSubmit){
             InputStream inputStream;
@@ -183,21 +208,13 @@ public class MainActivity {
 
         private void showSuccess(String result) {
             //generateNoteOnSD("ErrorHtml", result);
-            Object obj = JSONValue.parse(result);
-            JSONArray json;
-            try {
-                json = (JSONArray)obj;
-                for (int i = 0; i < json.size(); i++) {
-                    JSONObject c;
-                    try {
-                        c = (JSONObject)json.get(i);
+            JSONParser parser = new JSONParser();
 
-                        //String success = c.get("success");
-                        System.out.println("Debug: isSuccessful: " + c.get(i));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
+            try {
+                Object obj = parser.parse(result);
+                JSONObject json = (JSONObject)obj;
+                System.out.println("Debug: isSuccessful: " +json.toJSONString());
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
